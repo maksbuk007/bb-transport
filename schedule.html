@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Расписание рейсов — BB-Logix.">
+  <title>BB-Logix — расписание</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="alternate icon" href="assets/logo5.ico">
+  <link rel="shortcut icon" href="assets/logo5.svg">
+</head>
+<body data-nav-role="public">
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <input type="checkbox" id="site-nav-toggle" class="site-nav-toggle" aria-hidden="true">
+      <a class="brand" href="index.html"><img src="assets/logo5.svg" alt=""><span>BB-Logix<small>Пассажирские перевозки</small></span></a>
+      <label for="site-nav-toggle" class="menu-button" aria-label="Меню"><span></span><span></span><span></span></label>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="schedule.html" aria-current="page">Расписание</a>
+        <a href="bookings.html">Мои бронирования</a>
+      </nav>
+      <a class="user-link user-link--guest" href="bookings.html" aria-label="Личный кабинет пассажира">Войти</a>
+    </div>
+  </header>
+  <main class="page-main">
+    <div class="container">
+      <header class="page-head page-head--media">
+        <div class="page-head__icon" aria-hidden="true"><img src="assets/icon-calendar.svg" alt=""></div>
+        <div class="page-head__body">
+          <h1>Расписание рейсов</h1>
+          <p>Таблица загружается из XML: время отправления и прибытия, автобус, свободные места и стоимость.</p>
+        </div>
+      </header>
+      <section class="panel schedule-panel" aria-label="Таблица рейсов">
+        <table class="data-table schedule-table">
+          <thead>
+            <tr>
+              <th>Маршрут</th>
+              <th>Отправление</th>
+              <th>Прибытие</th>
+              <th>Автобус</th>
+              <th>Свободно</th>
+              <th>Стоимость</th>
+              <th>Статус</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody data-schedule-table></tbody>
+        </table>
+      </section>
+      <section class="booking-panel" data-booking-panel hidden aria-label="Форма бронирования">
+        <div class="booking-panel__head">
+          <div>
+            <span class="muted">Выбранный рейс</span>
+            <h2 data-booking-title>Маршрут</h2>
+          </div>
+          <button class="button button--ghost" type="button" data-close-booking>Закрыть</button>
+        </div>
+        <form data-booking-form>
+          <input type="hidden" name="routeId">
+          <input type="hidden" name="bookingId">
+          <div class="booking-layout">
+            <div>
+              <h3>Схема мест в салоне</h3>
+              <div class="seat-legend">
+                <span><i class="seat seat--free"></i>Свободно</span>
+                <span><i class="seat seat--busy"></i>Занято</span>
+                <span><i class="seat seat--selected"></i>Выбрано</span>
+              </div>
+              <div class="seat-map" data-seat-map></div>
+              <p class="booking-limit-notice" role="note">
+                Онлайн можно выбрать <strong>до 4 мест</strong> за одно бронирование.
+                Бронирование <strong>более 4 мест</strong> оформляется только по звонку администратору:
+                <a class="booking-limit-notice__phone" href="tel:+375291883665" aria-label="Позвонить администратору: +375 29 188-36-65">+375 29 188-36-65</a>
+              </p>
+            </div>
+            <div class="passenger-form">
+              <button class="button button--ghost" type="button" data-swap-booking-route>Поменять направление</button>
+              <label class="field">
+                Место посадки
+                <select name="boardingStop" data-booking-stop required></select>
+              </label>
+              <label class="field">
+                ФИО пассажира
+                <input type="text" name="passenger" placeholder="Например, Букатин Максимилиан" required>
+              </label>
+              <label class="field">
+                Телефон
+                <input type="tel" name="phone" placeholder="+375 29 000-00-00" required>
+              </label>
+              <label class="field">
+                Количество пассажиров
+                <input type="number" name="passengers" value="1" min="1" max="4" required>
+              </label>
+              <article class="booking-summary" data-booking-summary aria-label="Сводка бронирования"></article>
+              <button class="button" type="submit">Подтвердить бронирование</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="site-footer__links" aria-label="Служебные разделы">
+        <a href="bookings.html">Личный кабинет пассажира</a>
+        <a href="admin.html">Панель администратора</a>
+        <a href="driver.html">Кабинет водителя</a>
+        <a href="login.html">Вход в систему</a>
+      </nav>
+      <div class="admin-phone-promo">
+        <p class="admin-phone-promo__label">Справочная администратора</p>
+        <a class="admin-phone-promo__number" href="tel:+375291883665" aria-label="Позвонить администратору: +375 29 188-36-65">+375 29 188-36-65</a>
+        <p class="admin-phone-promo__hint">Бронирование более 4 мест — только по телефону</p>
+      </div>
+      <div>© 2026 Система управления пассажирскими перевозками</div>
+    </div>
+  </footer>
+  <div class="toast" data-message role="status" aria-live="polite"></div>
+  <script type="module" src="js/main.js?v=20"></script>
+</body>
+</html>

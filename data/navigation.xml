@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigation>
+  <section id="public" title="Публичная часть">
+    <item href="index.html" label="Главная" roles="passenger"/>
+    <item href="schedule.html" label="Расписание" roles="passenger"/>
+    <item href="bookings.html" label="Мои бронирования" roles="passenger"/>
+  </section>
+  <section id="admin" title="Административная часть">
+    <item href="admin.html" label="Админ" roles="admin"/>
+  </section>
+  <section id="driver" title="Раздел водителя">
+    <item href="index.html" label="Главная" roles="driver"/>
+  </section>
+</navigation>

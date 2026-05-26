@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+  <route id="r1">
+    <from>Минск</from>
+    <to>Солигорск</to>
+    <departure>07:00</departure>
+    <arrival>08:45</arrival>
+    <duration>1ч 45м</duration>
+    <distance>135км</distance>
+    <driver>Сергей Иванов</driver>
+    <vehicle>Mercedes-Benz Sprinter</vehicle>
+    <freeSeats>20</freeSeats>
+    <totalSeats>20</totalSeats>
+    <price currency="BYN">20</price>
+    <platform>1</platform>
+    <status>Ожидается</status>
+  </route>
+  <route id="r2">
+    <from>Солигорск</from>
+    <to>Минск</to>
+    <departure>05:00</departure>
+    <arrival>06:45</arrival>
+    <duration>1ч 45м</duration>
+    <distance>135км</distance>
+    <driver>Андрей Ковалёв</driver>
+    <vehicle>MAN Lion's Coach</vehicle>
+    <freeSeats>20</freeSeats>
+    <totalSeats>20</totalSeats>
+    <price currency="BYN">20</price>
+    <platform>2</platform>
+    <status>Задержан</status>
+  </route>
+</routes>

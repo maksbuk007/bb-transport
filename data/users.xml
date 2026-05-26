@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user id="u1" role="passenger">
+    <name>Букатин Максимилиан</name>
+    <email>ivan@example.com</email>
+    <login>passenger</login>
+    <password>passenger</password>
+  </user>
+  <user id="u2" role="admin">
+    <name>Анна Смирнова</name>
+    <email>admin@transithub.by</email>
+    <login>admin</login>
+    <password>admin</password>
+  </user>
+  <user id="u3" role="driver">
+    <name>Сергей Иванов</name>
+    <email>driver@transithub.by</email>
+    <login>driver</login>
+    <password>driver</password>
+  </user>
+</users>

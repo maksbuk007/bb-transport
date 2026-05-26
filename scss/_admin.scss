@@ -1,0 +1,303 @@
+@use "variables" as *;
+@use "layout" as *;
+
+.panel,
+.stat-grid article,
+.booking-panel {
+  @include card-base;
+  transition: box-shadow $transition, transform $transition;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+
+  article {
+    padding: 22px;
+  }
+
+  span {
+    display: block;
+    color: $color-muted;
+  }
+
+  strong {
+    font-size: 30px;
+  }
+}
+
+.panel {
+  overflow: hidden;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: $color-surface;
+
+  th,
+  td {
+    padding: 16px;
+    border-bottom: 1px solid $color-border;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  th {
+    color: $color-muted;
+    background: #f5f8fb;
+    font-size: 13px;
+  }
+
+  tbody tr {
+    transition: background $transition;
+
+    &:hover {
+      background: #f8fbfd;
+    }
+  }
+
+  .time-cell {
+    font-family: $font-mono;
+    font-weight: 600;
+  }
+}
+
+.schedule-panel {
+  margin-bottom: 24px;
+}
+
+.admin-route-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-bottom: 28px;
+  padding: 22px;
+  width: 100%;
+  max-width: 100%;
+
+  .button {
+    grid-column: 1 / -1;
+    justify-self: stretch;
+    align-self: end;
+  }
+
+  @media (max-width: 640px) {
+    gap: 12px;
+    margin-bottom: 18px;
+    padding: 16px;
+    overflow: visible;
+
+    .button {
+      width: 100%;
+      align-self: stretch;
+    }
+
+    .field {
+      gap: 6px;
+    }
+
+    input,
+    select {
+      min-height: 42px;
+    }
+  }
+}
+
+.table-input {
+  width: 100%;
+  min-width: 180px;
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid $color-border;
+  border-radius: 6px;
+  color: $color-text;
+  background: $color-surface;
+  font: inherit;
+  font-size: 14px;
+
+  &--short {
+    min-width: 104px;
+  }
+
+  & + & {
+    margin-top: 8px;
+  }
+
+  @media (max-width: 640px) {
+    min-width: 120px;
+    min-height: 38px;
+
+    &--short {
+      min-width: 92px;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+
+  article {
+    padding: 22px;
+  }
+
+  h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+  }
+
+  p {
+    margin: 0;
+    color: $color-muted;
+    font-size: 14px;
+  }
+
+  strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 24px;
+    color: $color-primary;
+  }
+}
+
+.auth-page {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__grid {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto 24px;
+  }
+}
+
+.auth-page__hint {
+  margin: 0 0 16px;
+  font-size: 14px;
+}
+
+.auth-card {
+  width: min(420px, 100%);
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  background: $color-surface;
+  box-shadow: 0 16px 36px rgba(17, 24, 39, 0.14);
+
+  img {
+    width: 42px;
+    height: 42px;
+  }
+
+  h1 {
+    margin: 18px 0 8px;
+    font-size: 28px;
+  }
+
+  p {
+    margin: 0 0 20px;
+    color: $color-muted;
+  }
+
+  .field {
+    margin-bottom: 14px;
+  }
+
+  .button {
+    width: 100%;
+    margin: 6px 0 14px;
+  }
+}
+
+.admin-phone-promo {
+  margin: 0 0 18px;
+  @include promo-callout;
+
+  &__label {
+    margin: 0 0 8px;
+    @include label-caps;
+  }
+
+  &__number {
+    display: inline-block;
+    font-family: $font-mono;
+    font-size: clamp(1.35rem, 4vw, 1.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: $color-primary;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+      outline: none;
+    }
+  }
+
+  &__hint {
+    margin: 10px 0 0;
+    font-size: 14px;
+    line-height: 1.45;
+    color: $color-text;
+  }
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+
+  .field {
+    gap: 6px;
+    font-size: 13px;
+  }
+
+  .field--grow {
+    flex: 1 1 200px;
+    min-width: 160px;
+  }
+
+  input,
+  select {
+    min-height: 42px;
+    max-height: 42px;
+  }
+}
+
+.show-more-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+
+  &__icon {
+    flex-shrink: 0;
+  }
+}
+
+.user-link--guest {
+  color: $color-primary;
+  background: #eef4fb;
+  border-color: rgba($color-primary, 0.25);
+  font-weight: 700;
+}

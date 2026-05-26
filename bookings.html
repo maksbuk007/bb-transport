@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Личный кабинет пассажира — BB-Logix.">
+  <title>BB-Logix — мои бронирования</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="alternate icon" href="assets/logo5.ico">
+  <link rel="shortcut icon" href="assets/logo5.svg">
+</head>
+<body data-nav-role="public">
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <input type="checkbox" id="site-nav-toggle" class="site-nav-toggle" aria-hidden="true">
+      <a class="brand" href="index.html"><img src="assets/logo5.svg" alt=""><span>BB-Logix<small>Пассажирские перевозки</small></span></a>
+      <label for="site-nav-toggle" class="menu-button" aria-label="Меню"><span></span><span></span><span></span></label>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="schedule.html">Расписание</a>
+        <a href="bookings.html" aria-current="page">Мои бронирования</a>
+      </nav>
+      <a class="user-link" href="bookings.html" aria-current="page">Букатин Максимилиан</a>
+    </div>
+  </header>
+  <main class="page-main">
+    <div class="container">
+      <header class="page-head page-head--media">
+        <div class="page-head__icon" aria-hidden="true"><img src="assets/icon-ticket.svg" alt=""></div>
+        <div class="page-head__body">
+          <h1>Личный кабинет пассажира</h1>
+          <p data-bookings-count>Активные бронирования</p>
+        </div>
+      </header>
+      <section aria-label="Активные бронирования">
+        <h2 class="section__title section__title--left">Активные бронирования</h2>
+        <div class="booking-list" data-bookings-list></div>
+      </section>
+      <section class="section" aria-label="История поездок">
+        <h2 class="section__title section__title--left">История поездок</h2>
+        <div class="booking-list" data-bookings-history></div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="site-footer__links" aria-label="Служебные разделы">
+        <a href="bookings.html">Личный кабинет пассажира</a>
+        <a href="admin.html">Панель администратора</a>
+        <a href="driver.html">Кабинет водителя</a>
+        <a href="login.html">Вход в систему</a>
+      </nav>
+      <div class="admin-phone-promo">
+        <p class="admin-phone-promo__label">Справочная администратора</p>
+        <a class="admin-phone-promo__number" href="tel:+375291883665" aria-label="Позвонить администратору: +375 29 188-36-65">+375 29 188-36-65</a>
+        <p class="admin-phone-promo__hint">Бронирование более 4 мест — только по телефону</p>
+      </div>
+      <div>© 2026 Система управления пассажирскими перевозками</div>
+    </div>
+  </footer>
+  <div class="toast" data-message role="status" aria-live="polite"></div>
+  <script type="module" src="js/main.js?v=20"></script>
+</body>
+</html>

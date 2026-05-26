@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Панель администратора — BB-Logix.">
+  <title>BB-Logix — администратор</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="alternate icon" href="assets/logo5.ico">
+  <link rel="icon" href="assets/logo5.svg">
+</head>
+<body data-nav-role="admin">
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <input type="checkbox" id="site-nav-toggle" class="site-nav-toggle" aria-hidden="true">
+      <a class="brand" href="index.html"><img src="assets/logo5.svg" alt=""><span>BB-Logix<small>Администратор</small></span></a>
+      <label for="site-nav-toggle" class="menu-button" aria-label="Меню"><span></span><span></span><span></span></label>
+      <nav class="site-nav" aria-label="Навигация администратора">
+        <a href="index.html">Главная</a>
+        <a href="admin.html" aria-current="page">Админ</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page-main">
+    <div class="container container--wide">
+      <header class="page-head page-head--media">
+        <div class="page-head__icon" aria-hidden="true"><img src="assets/icon-admin.svg" alt=""></div>
+        <div class="page-head__body">
+          <h1>Панель администратора</h1>
+          <p>Управление расписанием, мониторинг автопарка и отчёты по перевозкам.</p>
+        </div>
+      </header>
+      <section class="stat-grid" data-admin-stats aria-label="Статистика"></section>
+      <div class="toolbar panel" data-admin-toolbar>
+        <label class="field field--grow field--with-icon">
+          <span class="field__label">Поиск</span>
+          <img class="field__icon" src="assets/icon-search.svg" alt="" width="18" height="18">
+          <input type="search" name="adminSearch" data-admin-search placeholder="Рейс, водитель, пассажир, телефон, номер брони, статус…" autocomplete="off">
+        </label>
+      </div>
+      <header class="page-head page-head--inner page-head--media">
+        <div class="page-head__body">
+        <h2>Таблица рейсов</h2>
+      <section class="panel" aria-label="Таблица рейсов">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Маршрут</th>
+              <th>Время</th>
+              <th>Водитель</th>
+              <th>Места</th>
+              <th>Цена</th>
+              <th>Статус</th>
+              <th>Действия</th>
+            </tr>
+          </thead>
+          <tbody data-admin-routes></tbody>
+        </table>
+      </section>
+      <section class="page-head page-head--inner">
+        <h2>Добавить рейс</h2>
+        <p>Новый маршрут появится в расписании и будет доступен для бронирования.</p>
+      </section>
+      <form class="admin-route-form panel" data-route-form>
+        <label class="field">Откуда<input name="from" required></label>
+        <label class="field">Куда<input name="to" required></label>
+        <label class="field">Отправление<input name="departure" type="time" required></label>
+        <label class="field">Прибытие<input name="arrival" type="time" required></label>
+        <label class="field">Автобус<input name="vehicle" value="Neoplan Tourliner" required></label>
+        <label class="field">Водитель<input name="driver" value="Дмитрий Жук" required></label>
+        <label class="field">Всего мест<input name="totalSeats" type="number" value="20" min="1" required></label>
+        <label class="field">Свободно<input name="freeSeats" type="number" value="20" min="0" required></label>
+        <label class="field">Цена BYN<input name="price" type="number" value="20" min="1" required></label>
+        <label class="field">Платформа<input name="platform" value="1" required></label>
+        <button class="button" type="submit">Добавить рейс</button>
+      </form>
+      <section class="page-head page-head--inner">
+        <h2>Пассажиры и бронирования</h2>
+        <p>Изменение данных пассажира, мест, суммы и статуса бронирования.</p>
+      </section>
+      <section class="panel" aria-label="Редактирование пассажиров">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Пассажир</th>
+              <th>Телефон</th>
+              <th>Рейс</th>
+              <th>Места</th>
+              <th>Статус</th>
+              <th>Сумма</th>
+              <th>Действия</th>
+            </tr>
+          </thead>
+          <tbody data-admin-passengers></tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="site-footer__links" aria-label="Служебные разделы">
+        <a href="bookings.html">Личный кабинет пассажира</a>
+        <a href="admin.html">Панель администратора</a>
+        <a href="driver.html">Кабинет водителя</a>
+        <a href="login.html">Вход в систему</a>
+      </nav>
+      <div class="admin-phone-promo">
+        <p class="admin-phone-promo__label">Справочная администратора</p>
+        <a class="admin-phone-promo__number" href="tel:+375291883665" aria-label="Позвонить администратору: +375 29 188-36-65">+375 29 188-36-65</a>
+        <p class="admin-phone-promo__hint">Бронирование более 4 мест — только по телефону</p>
+      </div>
+      <div>© 2026 Система управления пассажирскими перевозками</div>
+    </div>
+  </footer>
+  <div class="toast" data-message role="status" aria-live="polite"></div>
+  <script type="module" src="js/main.js?v=20"></script>
+</body>
+</html>

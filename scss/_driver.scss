@@ -1,0 +1,51 @@
+@use "variables" as *;
+@use "layout" as *;
+
+.driver-list {
+  display: grid;
+  gap: 18px;
+}
+
+.driver-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  padding: 24px;
+  @include card-base;
+  transition: box-shadow $transition, transform $transition;
+
+  h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+  }
+
+  p {
+    margin: 0;
+    color: $color-muted;
+  }
+}
+
+.passenger-list {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 12px;
+}
+
+.passenger-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  background: #f8fbfd;
+
+  span,
+  em {
+    display: block;
+    color: $color-muted;
+    font-style: normal;
+    font-size: 13px;
+  }
+}

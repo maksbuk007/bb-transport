@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookings>
+  <booking id="b1" routeId="r1-0900">
+    <passenger>Букатин Максимилиан</passenger>
+    <phone>+375 29 111-22-33</phone>
+    <boardingStop>ст. «Дружная»</boardingStop>
+    <seats>
+      <seat>5</seat>
+      <seat>6</seat>
+    </seats>
+    <status>Подтверждено</status>
+    <total currency="BYN">40</total>
+  </booking>
+  <booking id="b2" routeId="r1-1100">
+    <passenger>Букатин Максимилиан</passenger>
+    <phone>+375 29 111-22-33</phone>
+    <boardingStop>Казинца</boardingStop>
+    <seats>
+      <seat>3</seat>
+    </seats>
+    <status>Ожидает посадки</status>
+    <total currency="BYN">20</total>
+  </booking>
+  <booking id="b3" routeId="r2-1000">
+    <passenger>Букатин Максимилиан</passenger>
+    <phone>+375 29 111-22-33</phone>
+    <boardingStop>Корона</boardingStop>
+    <seats>
+      <seat>8</seat>
+    </seats>
+    <status>Бронирование отменено</status>
+    <total currency="BYN">20</total>
+  </booking>
+  <booking id="b4" routeId="r1-0900">
+    <passenger>Мария Ковалева</passenger>
+    <phone>+375 33 444-55-66</phone>
+    <boardingStop>Брестская</boardingStop>
+    <seats>
+      <seat>14</seat>
+    </seats>
+    <status>Ожидает посадки</status>
+    <total currency="BYN">20</total>
+  </booking>
+  <booking id="b5" routeId="r1-1400">
+    <passenger>Алексей Сидоров</passenger>
+    <phone>+375 44 777-88-99</phone>
+    <boardingStop>Рижская</boardingStop>
+    <seats>
+      <seat>1</seat>
+      <seat>2</seat>
+    </seats>
+    <status>Посадка подтверждена</status>
+    <total currency="BYN">40</total>
+  </booking>
+  <booking id="b6" routeId="r1-1600">
+    <passenger>Букатин Максимилиан</passenger>
+    <phone>+375 29 111-22-33</phone>
+    <boardingStop>БСП</boardingStop>
+    <seats>
+      <seat>10</seat>
+    </seats>
+    <status>Ожидает посадки</status>
+    <total currency="BYN">20</total>
+  </booking>
+  <booking id="b7" routeId="r2-0800">
+    <passenger>Елена Новик</passenger>
+    <phone>+375 25 300-40-50</phone>
+    <boardingStop>маг. «Мартин»</boardingStop>
+    <seats>
+      <seat>4</seat>
+    </seats>
+    <status>Подтверждено</status>
+    <total currency="BYN">20</total>
+  </booking>
+</bookings>

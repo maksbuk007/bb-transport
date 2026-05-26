@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Вход в систему — BB-Logix (демо).">
+  <title>BB-Logix — вход</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="alternate icon" href="assets/logo5.ico">
+  <link rel="shortcut icon" href="assets/logo5.svg">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html"><img src="assets/logo5.svg" alt=""><span>BB-Logix<small>Вход в систему</small></span></a>
+      <nav class="site-nav" aria-label="Навигация">
+        <a href="index.html">Главная</a>
+        <a href="bookings.html">Пассажир</a>
+        <a href="admin.html">Админ</a>
+        <a href="driver.html">Водитель</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page-main auth-page">
+    <div class="container">
+      <div class="auth-page__grid">
+        <form class="auth-card">
+          <img src="assets/icon-ticket.svg" alt="" width="48" height="48">
+          <h1>Вход в систему</h1>
+          <p class="muted">Демонстрационная форма. Кабинеты открыты без авторизации — поля ниже только для вида.</p>
+          <label class="field">
+            <span>Логин</span>
+            <input type="text" name="login" autocomplete="username">
+          </label>
+          <label class="field">
+            <span>Пароль</span>
+            <input type="password" name="password" autocomplete="current-password">
+          </label>
+          <button class="button" type="reset">Войти</button>
+          <a class="button button--ghost" href="index.html">На главную</a>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">© 2026 Система управления пассажирскими перевозками</div>
+  </footer>
+  <div class="toast" data-message role="status" aria-live="polite"></div>
+  <script type="module" src="js/main.js?v=20"></script>
+</body>
+</html>
